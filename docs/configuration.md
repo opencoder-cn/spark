@@ -226,7 +226,7 @@ of the most common options to set are:
 </tr>
 <tr>
  <td><code>spark.driver.resource.{resourceName}.discoveryScript</code></td>
-  <td>None</td>
+  <td>none</td>
   <td>
     A script for the driver to run to discover a particular resource type. This should
     write to STDOUT a JSON string in the format of the ResourceInformation class. This has a
@@ -237,7 +237,7 @@ of the most common options to set are:
 </tr>
 <tr>
  <td><code>spark.driver.resource.{resourceName}.vendor</code></td>
-  <td>None</td>
+  <td>none</td>
   <td>
     Vendor of the resources to use for the driver. This option is currently
     only supported on Kubernetes and is actually both the vendor and domain following
@@ -330,7 +330,7 @@ of the most common options to set are:
 </tr>
 <tr>
  <td><code>spark.executor.resource.{resourceName}.discoveryScript</code></td>
-  <td>None</td>
+  <td>none</td>
   <td>
     A script for the executor to run to discover a particular resource type. This should
     write to STDOUT a JSON string in the format of the ResourceInformation class. This has a
@@ -340,7 +340,7 @@ of the most common options to set are:
 </tr>
 <tr>
  <td><code>spark.executor.resource.{resourceName}.vendor</code></td>
-  <td>None</td>
+  <td>none</td>
   <td>
     Vendor of the resources to use for the executors. This option is currently
     only supported on Kubernetes and is actually both the vendor and domain following
@@ -1410,7 +1410,7 @@ Apart from these, the following properties are also available, and may be useful
 </tr>
 <tr>
   <td><code>spark.ui.filters</code></td>
-  <td>None</td>
+  <td>none</td>
   <td>
     Comma separated list of filter class names to apply to the Spark Web UI. The filter should be a
     standard <a href="http://docs.oracle.com/javaee/6/api/javax/servlet/Filter.html">
@@ -2470,16 +2470,16 @@ Apart from these, the following properties are also available, and may be useful
 </tr>
 <tr>
   <td><code>spark.speculation.task.duration.threshold</code></td>
-  <td>None</td>
+  <td>none</td>
   <td>
-    Task duration after which scheduler would try to speculative run the task. If provided, tasks
+    Task duration after which scheduler would try to speculatively run the task. If provided, tasks
     would be speculatively run if current stage contains less tasks than or equal to the number of
     slots on a single executor and the task is taking longer time than the threshold. This config
     helps speculate stage with very few tasks. Regular speculation configs may also apply if the
     executor slots are large enough. E.g. tasks might be re-launched if there are enough successful
     runs even though the threshold hasn't been reached. The number of slots is computed based on
     the conf values of spark.executor.cores and spark.task.cpus minimum 1.
-    Default unit is bytes, unless otherwise specified.
+    Default unit is milliseconds, unless otherwise specified.
   </td>
   <td>3.0.0</td>
 </tr>
@@ -3042,20 +3042,20 @@ External users can query the static sql config values via `SparkSession.conf` or
   <tr><th>Property Name</th><th>Default</th><th>Meaning</th><th>Since Version</th></tr>
   <tr>
     <td><code>spark.deploy.recoveryMode</code></td>
-    <td>NONE</td>
+    <td>none</td>
     <td>The recovery mode setting to recover submitted Spark jobs with cluster mode when it failed and relaunches.
     This is only applicable for cluster mode when running with Standalone or Mesos.</td>
     <td>0.8.1</td>
   </tr>
   <tr>
     <td><code>spark.deploy.zookeeper.url</code></td>
-    <td>None</td>
+    <td>none</td>
     <td>When `spark.deploy.recoveryMode` is set to ZOOKEEPER, this configuration is used to set the zookeeper URL to connect to.</td>
     <td>0.8.1</td>
   </tr>
   <tr>
     <td><code>spark.deploy.zookeeper.dir</code></td>
-    <td>None</td>
+    <td>none</td>
     <td>When `spark.deploy.recoveryMode` is set to ZOOKEEPER, this configuration is used to set the zookeeper directory to store recovery state.</td>
     <td>0.8.1</td>
   </tr>
