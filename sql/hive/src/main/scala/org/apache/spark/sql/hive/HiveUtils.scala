@@ -144,7 +144,7 @@ private[spark] object HiveUtils extends Logging {
   val CONVERT_INSERTING_PARTITIONED_TABLE =
     buildConf("spark.sql.hive.convertInsertingPartitionedTable")
       .doc("When set to true, and `spark.sql.hive.convertMetastoreParquet` or " +
-        "`spark.sql.hive.convertMetastoreOrc` is true, the built-in ORC/Parquet writer is used" +
+        "`spark.sql.hive.convertMetastoreOrc` is true, the built-in ORC/Parquet writer is used " +
         "to process inserting into partitioned ORC/Parquet tables created by using the HiveSQL " +
         "syntax.")
       .version("3.0.0")
@@ -155,7 +155,7 @@ private[spark] object HiveUtils extends Logging {
     .doc("When set to true,  Spark will try to use built-in data source writer " +
       "instead of Hive serde in CTAS. This flag is effective only if " +
       "`spark.sql.hive.convertMetastoreParquet` or `spark.sql.hive.convertMetastoreOrc` is " +
-      "enabled respectively for Parquet and ORC formats")
+      "enabled respectively for Parquet and ORC formats.")
     .version("3.0.0")
     .booleanConf
     .createWithDefault(true)
@@ -164,7 +164,7 @@ private[spark] object HiveUtils extends Logging {
     .doc("When set to true,  Spark will try to use built-in data source writer " +
       "instead of Hive serde in INSERT OVERWRITE DIRECTORY. This flag is effective only if " +
       "`spark.sql.hive.convertMetastoreParquet` or `spark.sql.hive.convertMetastoreOrc` is " +
-      "enabled respectively for Parquet and ORC formats")
+      "enabled respectively for Parquet and ORC formats.")
     .version("3.3.0")
     .booleanConf
     .createWithDefault(true)
